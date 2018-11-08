@@ -1,3 +1,24 @@
+#!/usr/bin/env bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+#=================================================================#
+#   System Required:  CentOS 6,7, Debian, Ubuntu                  #
+#   Description: One click Install ShadowsocksR Server            #
+#   Author: Teddysun <i@teddysun.com>                             #
+#   Thanks: @breakwa11 <https://twitter.com/breakwa11>            #
+#   Intro:  https://shadowsocks.be/9.html                         #
+#=================================================================#
+
+clear
+echo
+echo "#############################################################"
+echo "# One click Install ShadowsocksR Server                     #"
+echo "# Intro: https://shadowsocks.be/9.html                      #"
+echo "# Author: Teddysun <i@teddysun.com>                         #"
+echo "# Github: https://github.com/shadowsocksr/shadowsocksr      #"
+echo "#############################################################"
+echo
+
 libsodium_file="libsodium-1.0.16"
 libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.16/libsodium-1.0.16.tar.gz"
 shadowsocks_r_file="shadowsocksr-3.2.2"
@@ -174,8 +195,8 @@ pre_install(){
     fi
     # Set ShadowsocksR config password
     echo "Please enter password for ShadowsocksR:"
-    read -p "(Default password: teddysun.com):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
+    read -p "(Default password: cain):" shadowsockspwd
+    [ -z "${shadowsockspwd}" ] && shadowsockspwd="cain"
     echo
     echo "---------------------------"
     echo "password = ${shadowsockspwd}"
@@ -239,7 +260,7 @@ pre_install(){
         echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which protocol you'd select(Default: ${protocols[0]}):" protocol
-    [ -z "$protocol" ] && protocol=1
+    [ -z "$protocol" ] && protocol=7
     expr ${protocol} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
@@ -313,7 +334,7 @@ download_files(){
     fi
     # Download ShadowsocksR init script
     if check_sys packageManager yum; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://github.com/Deckard-f-Cain/SSR/blob/master/Cain-SSR.sh -O /etc/init.d/shadowsocks; then
             echo -e "[${red}Error${plain}] Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
