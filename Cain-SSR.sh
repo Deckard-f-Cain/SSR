@@ -4,8 +4,8 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6,7, Debian, Ubuntu                  #
 #   Description: One click Install ShadowsocksR Server            #
-#   Author: "Cain <vip_hadji@hotmail.com>"                        #
-#   Thanks: Teddysun <i@teddysun.com>                             #
+#   Author: Cain <vip_hadji@hotmail.com>                          #
+#   Thanks: @breakwa11 <https://twitter.com/breakwa11>            #
 #   Intro:  https://shadowsocks.be/9.html                         #
 #=================================================================#
 
@@ -14,7 +14,7 @@ echo
 echo "#############################################################"
 echo "# One click Install ShadowsocksR Server                     #"
 echo "# Intro: https://shadowsocks.be/9.html                      #"
-echo "# Author: "Cain <vip_hadji@hotmail.com>"                    #"
+echo "# Author: Cain <vip_hadji@hotmail.com>                      #"
 echo "# Github: https://github.com/shadowsocksr/shadowsocksr      #"
 echo "#############################################################"
 echo
@@ -433,7 +433,7 @@ install(){
 
         clear
         echo
-        echo -e "Congratulations! ShadowsocksR server install completed!"
+        echo -e "Congratulations, ShadowsocksR server install completed!"
         echo -e "Your Server IP        : \033[41;37m $(get_ip) \033[0m"
         echo -e "Your Server Port      : \033[41;37m ${shadowsocksport} \033[0m"
         echo -e "Your Password         : \033[41;37m ${shadowsockspwd} \033[0m"
@@ -441,10 +441,11 @@ install(){
         echo -e "Your obfs             : \033[41;37m ${shadowsockobfs} \033[0m"
         echo -e "Your Encryption Method: \033[41;37m ${shadowsockscipher} \033[0m"
         echo
+        echo "Welcome to visit:https://shadowsocks.be/9.html"
         echo "Enjoy it!"
         echo
     else
-        echo "ShadowsocksR install failed due to fatal errors."
+        echo "ShadowsocksR install failed..."
         install_cleanup
         exit 1
     fi
