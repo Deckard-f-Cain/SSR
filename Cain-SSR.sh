@@ -4,7 +4,7 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6,7, Debian, Ubuntu                  #
 #   Description: One click Install ShadowsocksR Server            #
-#   Author: Cain <vip_hadji@hotmail.com>                          #
+#   Author: Cain <url="vip_hadji@hotmail.com">                    #
 #   Thanks: @breakwa11 <https://twitter.com/breakwa11>            #
 #   Intro:  https://shadowsocks.be/9.html                         #
 #=================================================================#
@@ -14,7 +14,7 @@ echo
 echo "#############################################################"
 echo "# One click Install ShadowsocksR Server                     #"
 echo "# Intro: https://shadowsocks.be/9.html                      #"
-echo "# Author: Cain <vip_hadji@hotmail.com>                      #"
+echo "# Author: Cain <url="vip_hadji@hotmail.com">                #"
 echo "# Github: https://github.com/shadowsocksr/shadowsocksr      #"
 echo "#############################################################"
 echo
